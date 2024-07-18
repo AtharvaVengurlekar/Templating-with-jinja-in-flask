@@ -1,1 +1,30 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-4">
+        {% for blog_post in posts %}
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h2 class="card-title">{{ blog_post['title'] }}</h2>
+                    <h5 class="card-subtitle mb-2 text-muted">{{ blog_post['subtitle'] }}</h5>
+                    <p class="card-text">{{ blog_post['body'] }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+<footer class="footer mt-4">
+    <div class="container">
+        <p class="text-muted">Copyright {{ year }} build by Atharva Vengurlekar</p>
+    </div>
+</footer>
+</html>
