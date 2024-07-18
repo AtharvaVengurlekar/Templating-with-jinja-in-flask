@@ -1,1 +1,22 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>Hey {{ name }}</h1>
+        <h2>I think you are: {{ age }}</h2>
+        <p>Your gender is: {{ gender }}</p>
+    </div>
+</body>
+<footer class="footer mt-4">
+    <div class="container">
+        <p class="text-muted">Copyright {{ year }} build by Atharva Vengurlekar</p>
+    </div>
+</footer>
+</html>
